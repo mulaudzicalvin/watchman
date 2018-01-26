@@ -2,18 +2,17 @@
 # License AGPL-3 - See https://www.gnu.org/licenses/agpl-3.0.html
 
 {
-    "name": "Adaptación de Watchman",
+    "name": "Stock Move Read Lots File",
     "version": "11.0.1.0.0",
     "author": "PESOL",
     "website": "http://pesol.es",
     "category": "Custom",
     "license": "AGPL-3",
     "depends": [
-        "mrp",
-        'stock_move_read_lots_file'
+        'stock',
     ],
     "data": [
-        "views/mrp_view.xml",
+        "wizard/move_line_view.xml",
     ],
     'installable': True,
 }

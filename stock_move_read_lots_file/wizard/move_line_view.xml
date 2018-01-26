@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+    <record id="view_wizard_move_line_form" model="ir.ui.view">
+      <field name="name">view.wizard_move_line.form</field>
+      <field name="model">wizard.move.line</field>
+      <field name="arch" type="xml">
+        <form string="Wizard Move Line">
+          <group name="main">
+            <field name="file_name" invisible="1"/>
+            <field name="lot_file" filename="file_name" string="Load File"/>
+          </group>
+          <footer>
+            <button name="load_lots_numbers" class="oe_highlight" type="object" string="Save"/>
+            or
+            <button class="oe_link" special="cancel" string="Cancel"/>
+          </footer>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_wizard_move_line">
+      <field name="name">Load Lots File</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">wizard.move.line</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">form</field>
+      <field name="target">new</field>
+    </record>
+
+    <record id="view_picking_form_inherit" model="ir.ui.view">
+      <field name="name">view.picking.form.inherit</field>
+      <field name="model">stock.picking</field>
+      <field name="inherit_id" ref="stock.view_picking_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//button[@name='action_show_details']" position="after">
+          <field name="picking_id" invisible="1"/>
+          <button
+            string="Load Lots Serial Nº"
+            name="%(action_wizard_move_line)d"
+            type="action"
+            icon="fa fa-upload"
+            context="{'tree_view_ref': 'stock.view_stock_move_line_operation_tree', 'default_product_uom_id': product_uom, 'default_picking_id': picking_id, 'default_move_id': id, 'default_product_id': product_id, 'default_location_id': location_id, 'default_location_dest_id': location_dest_id}"/>
+        </xpath>
+      </field>
+    </record>
+  </data>
+</openerp>
