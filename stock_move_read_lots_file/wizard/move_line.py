@@ -30,7 +30,7 @@ class WizardMoveLine(models.TransientModel):
                 ws = wb.sheet_by_index(0)
                 for rownum in xrange(ws.nrows):
                     a = ws.row_values(rownum)[0]
-                    lot_string.append(int(a))
+                    lot_string.append(a)
             elif name[1] == 'csv':
                 f = base64.b64decode(self.lot_file)
                 lot_string = f.decode('utf-8').split('\n')
