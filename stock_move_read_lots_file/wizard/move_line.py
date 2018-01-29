@@ -4,6 +4,7 @@
 from openerp import models, api, fields, _
 from odoo.exceptions import ValidationError
 import base64
+import xlrd
 
 
 class WizardMoveLine(models.TransientModel):
@@ -17,16 +18,26 @@ class WizardMoveLine(models.TransientModel):
 
     @api.multi
     def load_lots_numbers(self):
-        ## TODO use xls files too
         move_obj = self.env['stock.move'].browse(
             self._context.get('default_move_id'))
         move_line_obj = self.env['stock.move.line']
-        lot_values = []
-        lot_obj = []
-        if self.lot_file:
-            f = base64.b64decode(self.lot_file)
-            lot_string = f.decode('utf-8').split('\n')
-            lot_string.pop(-1)
+        lot_string = []
+        if self.file_name and self.lot_file:
+            name = self.file_name.split('.')
+            if name[1] == 'xls':
+                wb = xlrd.open_workbook(
+                    file_contents=base64.decodestring(self.lot_file))
+                ws = wb.sheet_by_index(0)
+                for rownum in xrange(ws.nrows):
+                    a = ws.row_values(rownum)[0]
+                    lot_string.append(int(a))
+            elif name[1] == 'csv':
+                f = base64.b64decode(self.lot_file)
+                lot_string = f.decode('utf-8').split('\n')
+                lot_string.pop(-1)
+            else:
+                raise ValidationError(
+                    _("You can olny upload csv or xls files"))
             for row in lot_string:
                 data = {
                     'lot_name': row,
