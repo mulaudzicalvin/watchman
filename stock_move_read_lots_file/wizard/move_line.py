@@ -37,7 +37,7 @@ class WizardMoveLine(models.TransientModel):
                 lot_string.pop(-1)
             else:
                 raise ValidationError(
-                    _("You can olny upload csv or xls files"))
+                    _("You can only upload csv or xls files"))
             for row in lot_string:
                 data = {
                     'lot_name': row,

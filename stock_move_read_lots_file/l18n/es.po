@@ -1,0 +1,114 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* stock_move_read_lots_file
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-29 10:16+0000\n"
+"PO-Revision-Date: 2018-01-29 10:16+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_move_read_lots_file
+#: model:ir.ui.view,arch_db:stock_move_read_lots_file.view_wizard_move_line_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: stock_move_read_lots_file
+#: model:ir.model.fields,field_description:stock_move_read_lots_file.field_wizard_move_line_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: stock_move_read_lots_file
+#: model:ir.model.fields,field_description:stock_move_read_lots_file.field_wizard_move_line_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: stock_move_read_lots_file
+#: model:ir.model.fields,field_description:stock_move_read_lots_file.field_wizard_move_line_display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: stock_move_read_lots_file
+#: model:ir.model.fields,field_description:stock_move_read_lots_file.field_wizard_move_line_file_name
+msgid "File Name"
+msgstr "Nombre del archivo"
+
+#. module: stock_move_read_lots_file
+#: model:ir.model.fields,field_description:stock_move_read_lots_file.field_wizard_move_line_id
+msgid "ID"
+msgstr "ID (identificación)"
+
+#. module: stock_move_read_lots_file
+#: model:ir.model.fields,field_description:stock_move_read_lots_file.field_wizard_move_line___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: stock_move_read_lots_file
+#: model:ir.model.fields,field_description:stock_move_read_lots_file.field_wizard_move_line_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización de"
+
+#. module: stock_move_read_lots_file
+#: model:ir.model.fields,field_description:stock_move_read_lots_file.field_wizard_move_line_write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: stock_move_read_lots_file
+#: model:ir.model.fields,field_description:stock_move_read_lots_file.field_wizard_move_line_lot_file
+#: model:ir.ui.view,arch_db:stock_move_read_lots_file.view_wizard_move_line_form
+msgid "Load File"
+msgstr "Importar fichero"
+
+#. module: stock_move_read_lots_file
+#: model:ir.actions.act_window,name:stock_move_read_lots_file.action_wizard_move_line
+msgid "Load Lots File"
+msgstr "Importar archivo lotes"
+
+#. module: stock_move_read_lots_file
+#: model:ir.ui.view,arch_db:stock_move_read_lots_file.view_picking_form_inherit
+msgid "Load Lots Serial Nº"
+msgstr "Cargar Nº de lotes"
+
+#. module: stock_move_read_lots_file
+#: model:ir.ui.view,arch_db:stock_move_read_lots_file.view_wizard_move_line_form
+msgid "Save"
+msgstr "Guardar"
+
+#. module: stock_move_read_lots_file
+#: model:ir.model,name:stock_move_read_lots_file.model_stock_move
+msgid "Stock Move"
+msgstr "Movimiento de existencias"
+
+#. module: stock_move_read_lots_file
+#: model:ir.ui.view,arch_db:stock_move_read_lots_file.view_wizard_move_line_form
+msgid "Wizard Move Line"
+msgstr "Asistente movimiento de lineas"
+
+#. module: stock_move_read_lots_file
+#: code:addons/stock_move_read_lots_file/wizard/move_line.py:40
+#, python-format
+msgid "You can olny upload csv or xls files"
+msgstr "Solo puedes importar archivos csv o xls"
+
+#. module: stock_move_read_lots_file
+#: code:addons/stock_move_read_lots_file/wizard/move_line.py:54
+#, python-format
+msgid "You must to upload a file first"
+msgstr "Primero debes de importar el archivo"
+
+#. module: stock_move_read_lots_file
+#: model:ir.ui.view,arch_db:stock_move_read_lots_file.view_wizard_move_line_form
+msgid "or"
+msgstr "or"
+
+#. module: stock_move_read_lots_file
+#: model:ir.model,name:stock_move_read_lots_file.model_wizard_move_line
+msgid "wizard.move.line"
+msgstr "wizard.move.line"
