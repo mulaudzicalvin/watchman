@@ -1,14 +1,13 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Contract Partners',
-    'version': '0.1',
+    'version': '11.0.1.0',
     'author': 'PESOL',
     'summary': 'Contract Partners',
     'images': [],
     'category': 'Sales Management',
     'depends': [
-        'account',
-        'analytic'],
+        'contract'],
     'data': [
         'views/contract_view.xml',
         #'views/invoice_view.xml'
