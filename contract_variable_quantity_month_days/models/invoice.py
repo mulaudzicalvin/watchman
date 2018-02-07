@@ -10,7 +10,6 @@ class AccountInvoice(models.Model):
         string='Contract Days',
         compute='_compute_contract_days')
 
-    @api.multi
     def _compute_contract_days(self):
         for invoice in self:
             if invoice.contract_id:
