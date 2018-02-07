@@ -20,7 +20,7 @@ class AccountInvoice(models.Model):
                 date_end_contract = invoice.contract_id.date_end and \
                     fields.Date.from_string(
                         invoice.contract_id.date_end)
-                if date_invoice.month == date_start_contract.mont:
+                if date_invoice.month == date_start_contract.month:
                     invoice.contract_days = monthrange(
                         date_invoice.year, date_invoice.month)[1] - \
                         date_start_contract.day
