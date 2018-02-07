@@ -18,5 +18,5 @@ class AccountAnalyticAccount(models.Model):
                         self)._prepare_invoice()
         invoice.update({
             'partner_shipping_id': self.service_partner_id
-                and self.service_partner_id.id)
+                and self.service_partner_id.id})
         return invoice
