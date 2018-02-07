@@ -7,7 +7,7 @@
     'images': [],
     'category': 'Sales Management',
     'depends': [
-        'contract'],
+        'contract_variable_quantity'],
     'data': [
     ],
     'installable': True,
