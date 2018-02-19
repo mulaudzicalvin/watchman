@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'Contract Invoice Days',
+    'name': 'Contract Variable Quantity Month Factor',
     'version': '11.0.1.0',
     'author': 'PESOL',
-    'summary': 'Contract Invoice Days',
+    'summary': 'Contract Variable Quantity Month Factor',
     'images': [],
     'category': 'Sales Management',
     'depends': [
