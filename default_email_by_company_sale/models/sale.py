@@ -8,7 +8,7 @@ class SaleOrder(models.Model):
     def action_quotation_send(self):
         self.ensure_one()
         ir_model_data = self.env['ir.model.data']
-        template_id = self.company_id.mail_template_sale_id
+        template_id = self.company_id.mail_template_sale_id.id
         if not template_id:
             return super(SaleOrder, self).action_quotation_send()
         compose_form = self.env.ref(

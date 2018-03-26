@@ -9,9 +9,9 @@ class PurchaseOrder(models.Model):
         self.ensure_one()
         template_id = False
         if self.env.context.get('send_rfq', False):
-            template_id = self.company_id.mail_template_purchase_id
+            template_id = self.company_id.mail_template_purchase_id.id
         else:
-            template_id = self.company_id.mail_template_purchase_done_id
+            template_id = self.company_id.mail_template_purchase_done_id.id
 
         if not template_id:
             return super(PurchaseOrder, self).action_rfq_send()
