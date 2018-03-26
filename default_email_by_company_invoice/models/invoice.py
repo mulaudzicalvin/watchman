@@ -7,8 +7,8 @@ class AccountInvoice(models.Model):
     @api.multi
     def action_invoice_sent(self):
         self.ensure_one()
-        template_id = self.company_id.mail_template_invoice_id.id
-        if not template_id:
+        template = self.company_id.mail_template_invoice_id
+        if not template:
             return super(AccountInvoice, self).action_invoice_sent()
         compose_form = self.env.ref(
             'mail.email_compose_message_wizard_form', False)
