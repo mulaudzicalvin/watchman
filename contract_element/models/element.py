@@ -56,5 +56,6 @@ class AccountAnalyticAccountElement(models.Model):
         for record in self.search([]):
             if record.qr == last_qr and not record.end_date:
                 raise ValidationError(
-                    _("You can't add more than one line with the same QR and without end date"))
+                    _("You can't add more than one line with the same QR "
+                      "and without end date"))
             last_qr = record.qr

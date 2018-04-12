@@ -22,20 +22,25 @@ class AccountAnalyticAccount(models.Model):
         partner = self.env['res.partner'].search([
             ('vat', '=', cif)
         ])
-        if partner:
-            contract = self.search([
-                ('partner_id', 'in', partner.ids)
-            ])
-            element = self.env['account.analytic.account.element'].create({
-                'qr': qr,
-                'vi': vi,
-                'start_date': date,
-                'contract_id': contract.id
-            })
-            return element
-        else:
+        if not partner:
             raise ValidationError(
                 _('No partner found with this cif'))
+        contract = self.search([
+            ('partner_id', 'in', partner.ids)
+        ])
+        if not contract:
+            raise ValidationError(
+                _('No partner found for this cif'))
+        if len(contract) > 1:
+            raise ValidationError(
+                _('There are more than 1 contract for this cif'))
+        element = self.env['account.analytic.account.element'].create({
+            'qr': qr,
+            'vi': vi,
+            'start_date': date,
+            'contract_id': contract.id
+        })
+        return element
 
     @api.model
     def unset_element(self, qr, date):
