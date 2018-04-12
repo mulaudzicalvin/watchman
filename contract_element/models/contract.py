@@ -14,7 +14,8 @@ class AccountAnalyticAccount(models.Model):
     @api.multi
     def getElementByMonth(self, month):
         # for invoice_line in self.recurring_invoice_line_ids:
-        for element in self.contract_element_ids:
+        # for element in self.contract_element_ids:
+        pass
 
     @api.model
     def set_element(self, cif, qr, vi, date):
