@@ -1,0 +1,125 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* contract_element
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-04-11 10:53+0000\n"
+"PO-Revision-Date: 2018-04-11 10:53+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: contract_element
+#: model:ir.ui.view,arch_db:contract_element.account_analytic_account_contract_elements
+msgid "<span class=\"o_stat_text\">\n"
+"							Contract Elements\n"
+"						</span>"
+msgstr "<span class=\"o_stat_text\">\n"
+"							Elementos Contrato\n"
+"						</span>"
+
+#. module: contract_element
+#: model:ir.model,name:contract_element.model_account_analytic_account
+msgid "Analytic Account"
+msgstr "Cuenta analítica"
+
+#. module: contract_element
+#: model:ir.actions.act_window,help:contract_element.account_contract_element_action
+msgid "Click to create a new Contrac Element."
+msgstr "Click para crear un nuevo Elemento de Contrato."
+
+#. module: contract_element
+#: model:ir.model.fields,field_description:contract_element.field_account_analytic_account_element_contract_id
+msgid "Contract"
+msgstr "Contrato"
+
+#. module: contract_element
+#: model:ir.actions.act_window,name:contract_element.account_contract_element_action
+#: model:ir.model.fields,field_description:contract_element.field_account_analytic_account_contract_element_ids
+#: model:ir.ui.menu,name:contract_element.contract_elements
+#: model:ir.ui.view,arch_db:contract_element.view_account_contract_element_form
+#: model:ir.ui.view,arch_db:contract_element.view_account_contract_element_tree
+msgid "Contract Elements"
+msgstr "Elementos de Contrato"
+
+#. module: contract_element
+#: model:ir.model.fields,field_description:contract_element.field_account_analytic_account_element_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: contract_element
+#: model:ir.model.fields,field_description:contract_element.field_account_analytic_account_element_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: contract_element
+#: model:ir.model.fields,field_description:contract_element.field_account_analytic_account_element_display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: contract_element
+#: model:ir.model.fields,field_description:contract_element.field_account_analytic_account_element_end_date
+msgid "End Date"
+msgstr "Fecha Fin"
+
+#. module: contract_element
+#: model:ir.model.fields,field_description:contract_element.field_account_analytic_account_element_end_date_percent
+msgid "End Date Percent"
+msgstr "Porcentaje Fecha Final"
+
+#. module: contract_element
+#: model:ir.model.fields,field_description:contract_element.field_account_analytic_account_element_id
+msgid "ID"
+msgstr "ID (identificación)"
+
+#. module: contract_element
+#: model:ir.model.fields,field_description:contract_element.field_account_analytic_account_element___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: contract_element
+#: model:ir.model.fields,field_description:contract_element.field_account_analytic_account_element_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización de"
+
+#. module: contract_element
+#: model:ir.model.fields,field_description:contract_element.field_account_analytic_account_element_write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: contract_element
+#: model:ir.model.fields,field_description:contract_element.field_account_analytic_account_element_qr
+msgid "QR"
+msgstr "QR"
+
+#. module: contract_element
+#: model:ir.model.fields,field_description:contract_element.field_account_analytic_account_element_start_date
+msgid "Start Date"
+msgstr "Fecha Inicio"
+
+#. module: contract_element
+#: model:ir.model.fields,field_description:contract_element.field_account_analytic_account_element_start_date_percent
+msgid "Start Date Percent"
+msgstr "Porcentaje Fecha Inicio"
+
+#. module: contract_element
+#: model:ir.model.fields,field_description:contract_element.field_account_analytic_account_element_vi
+msgid "VI"
+msgstr "VI"
+
+#. module: contract_element
+#: code:addons/contract_element/models/element.py:59
+#, python-format
+msgid "You can't add more than one line with the same QR and without end date"
+msgstr "No puedes añadir más de una linea con el mismo QR sin fecha de baja"
+
+#. module: contract_element
+#: model:ir.model,name:contract_element.model_account_analytic_account_element
+msgid "account.analytic.account.element"
+msgstr "account.analytic.account.element"
