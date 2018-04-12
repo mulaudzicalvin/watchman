@@ -48,9 +48,9 @@ class AccountAnalyticAccount(models.Model):
             ('qr', '=', qr),
             ('end_date', '=', False)
         ])
-        if element:
-            element.end_date = date
-            return element.id
-        else:
+        if not element:
             raise ValidationError(
                 _('No element found with this qr'))
+
+        element.end_date = date
+        return element.id
