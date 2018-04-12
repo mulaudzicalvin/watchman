@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+  <record id="contract_elements_formula" model="contract.line.qty.formula">
+      <field name='name'>Contract Elements Fee</field>
+      <field name="code">
+      group = env['account.analytic.account'].read_group([
+      ('date', '&gt;=', line.date_from),
+      ('date', '&lt;=', line.date_to),
+  ], fields=['unit_amount'], groupby=[])
+  result = group and group[0]['unit_amount'] or 0.0
+      </field>
+  </record>
+</odoo>
