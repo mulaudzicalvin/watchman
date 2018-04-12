@@ -40,7 +40,7 @@ class AccountAnalyticAccount(models.Model):
             'start_date': date,
             'contract_id': contract.id
         })
-        return element
+        return element.id
 
     @api.model
     def unset_element(self, qr, date):
@@ -50,7 +50,7 @@ class AccountAnalyticAccount(models.Model):
         ])
         if element:
             element.end_date = date
-            return element
+            return element.id
         else:
             raise ValidationError(
                 _('No element found with this qr'))
