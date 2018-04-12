@@ -24,7 +24,7 @@ class AccountAnalyticAccount(models.Model):
         ])
         if partner:
             contract = self.search([
-                ('partner_id', '=', partner.id)
+                ('partner_id', 'in', partner.ids)
             ])
             element = self.env['account.analytic.account.element'].create({
                 'qr': qr,
